@@ -4,11 +4,13 @@
 
 <t:layout>	
     <jsp:body>    
-    	<div>
-    		<a href="<c:url value="/mantenimiento/agregar"/>" class="btn btn-success">Agregar  <span class="glyphicon glyphicon-plus"></span></a>
+    <center><h1>Sistema de Control de Mantenimientos</h1> </center>
+			
+    	<div align="Left">
+    		<a  href="<c:url value="/mantenimiento/agregar"/>" class="btn btn-primary">Agregar  <span class="glyphicon glyphicon-plus"></span></a>
     	</div><br>
     	<div>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="tabla">
 				<thead>
 					<tr>
 						<th>Descripción</th>

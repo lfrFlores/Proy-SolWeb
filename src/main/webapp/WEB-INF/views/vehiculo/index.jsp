@@ -3,12 +3,14 @@
 <%@taglib prefix="c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
 <t:layout>	
-    <jsp:body>    
+    <jsp:body> 
+    <center><h1>Sistema de Control de Vehículos</h1> </center>			
+       
     	<div>
-    		<a href="<c:url value="/vehiculo/agregar"/>" class="btn btn-success">Agregar  <span class="glyphicon glyphicon-plus"></span></a>
+    		<a href="<c:url value="/vehiculo/agregar"/>" class="btn btn-primary">Agregar  <span class="glyphicon glyphicon-plus"></span></a>
     	</div><br>
     	<div>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="tabla">
 				<thead>
 					<tr>
 						<th>Placa</th>
