@@ -1,0 +1,112 @@
+.About
+  &-title
+    text-align center
+    font-family $title-font
+    font-weight normal
+    font-size 3rem
+    
+    +from(768px)
+      font-size 4rem
+    span
+      display block
+  &-subtitle
+    border-top 1px solid lighten($color-black, 90%)
+    text-align center
+    text-transform uppercase
+    padding 1em 0
+    margin 0
+    letter-spacing 2px
+    color $color-black
+.AboutHero
+  padding-top 5em
+  
+.Skills
+  display flex
+  flex-wrap wrap
+  border-bottom 1px solid lighten($color-black, 90%)
+  
+.Skill
+  box-sizing border-box
+  padding 1em 2em
+  border-top 1px solid lighten($color-black, 90%)
+  border-right 1px solid lighten($color-black, 90%)
+  +from(768px)
+    width 50%
+    &:nth-of-type(even)
+      border-right none
+  +from(1024px)
+    width calc(100vw / 3)
+    padding 2em 4em
+    &:nth-of-type(2n)
+      border-right 1px solid lighten($color-black, 90%)
+    &:nth-of-type(3n)
+      border-right none
+  &-title
+    text-align center
+    text-transform uppercase
+    font-size 1em
+    letter-spacing 2px
+    padding-bottom 2em
+    relative()
+    &:after
+      width 50px
+      height 1px
+      content ""
+      absolute(bottom)
+      left calc(50% - 25px)
+      background lighten($color-black, 60%)
+  &-description
+    text-align center
+    line-height 22px
+
+.HistoryList
+  text-align center
+  padding 0
+
+.HistoryItem
+  margin-bottom 1.5em
+  padding .3em 0
+  relative()
+  &:after
+    content ""
+    background lighten($color-black, 60%)
+    width 1px
+    height 1.5em
+    absolute(left 50% top 100%)
+.CVItem
+  &-place
+  &-date
+  &-job
+    text-transform uppercase
+  &-place
+    font-size 1.3em
+    margin .5rem 0
+    +from(768px)
+      font-size 2em
+    
+  &-date
+    font-size .8em
+    font-weight bold
+  &-job
+    letter-spacing 2px
+  a
+    color darken($color-black, 30%)
+    text-decoration none
+    // letter-spacing 1px
+    letter-spacing -1px
+    
+.Footer
+  padding 4em 1em
+  background #313131
+  text-align center
+  
+.ContactButton
+  border 3px double white
+  text-decoration none
+  color white
+  display inline-block
+  padding 2em 3em
+  text-transform uppercase
+  font-size .6em
+  font-weight bold
+  letter-spacing 2px

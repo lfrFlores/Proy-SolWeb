@@ -4,7 +4,9 @@
 <%@taglib prefix="form" uri = "http://www.springframework.org/tags/form" %>
 
 <t:layout>
-    <jsp:body>
+    <jsp:body>    
+    <br><br>    
+    <div class="container">	
 		<form:form method="post" commandName="mantenimiento">
 			<div>
 				<form:label path="descripcion">descripcion</form:label>
@@ -16,10 +18,11 @@
 				<form:input path="kmFrecuencia" cssClass="form-control"/>
 				<form:errors path="kmFrecuencia"></form:errors>
 			</div>		
-			
+			<br>
 			<div>
-				<input type="submit" value="Guardar" class="btn btn-success"/>
+				<input type="submit" value="Guardar" class="btn btn-success" style="float: right;"/>
 			</div>		
 		</form:form>
+		</div>	
     </jsp:body>
 </t:layout>

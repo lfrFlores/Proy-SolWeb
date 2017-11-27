@@ -12,9 +12,15 @@ public class Service<T> implements IService<T> {
 	public Service(DriverManagerDataSource ds) {
 		db = new JdbcTemplate(ds);
 	}
-
 	@Override
 	public List<Map<String, Object>> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Map<String, Object>> getList(String searchCriteria) {
 		// TODO Auto-generated method stub
 		return null;
 	}

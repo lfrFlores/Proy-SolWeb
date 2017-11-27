@@ -1,5 +1,6 @@
 package com.upn.sagitario.controller;
 
+import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -30,9 +31,15 @@ public class MantenimientoController {
 	@RequestMapping("")
 	public ModelAndView index(HttpServletRequest req) {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName(viewsUrl + "index");		
-		mav.addObject("mantenimientos", serviceMantenimiento.getList());		
-		return mav;		
+//		mav.setViewName(viewsUrl + "index");		
+//		mav.addObject("mantenimientos", serviceMantenimiento.getList());		
+//		return mav;	
+		mav.setViewName(viewsUrl + "index");
+				
+		String searchCriteria = req.getParameter("descripcion");
+		mav.addObject("mantenimientos", serviceMantenimiento.getList(searchCriteria));	
+		mav.addObject("searchCriteria", searchCriteria);
+		return mav;
 	}	
 	
 	@RequestMapping(value="/agregar", method=RequestMethod.GET)

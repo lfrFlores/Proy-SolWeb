@@ -1,0 +1,87 @@
+.MainMenu
+  background transparent
+  text-align center
+  height 3.75em
+  position fixed
+  left 0
+  right 0
+  top 0
+  z-index 10
+  padding 1em 0
+  font-family "Roboto"
+  &-list
+    margin 0
+    padding 0
+    display flex
+    justify-content center
+    align-items center
+    list-style none
+
+  &-item
+    display inline-block
+
+  &-logo
+    width 30px
+    height 30px
+    border-radius 50%
+    border 2px solid rgba(white, .5)
+    transition .2s
+    background rgba(black, .7)
+    margin 0 .5em
+    
+    +from(768px)
+      width 64px
+      height 64px
+      margin 0 1em
+      
+    &:hover
+      border-color rgba(white, .8)
+      box-shadow 0 0 5px white
+    a
+      display flex
+      justify-content center
+      align-items center
+      width inherit
+      height inherit
+    img
+      width 80%
+      height 80%
+      display block
+  &-link
+    color white
+    text-decoration none
+    font-size .6em
+    relative()
+    text-transform uppercase
+    letter-spacing 2px
+    font-weight bold
+    margin 0 .5em
+    padding .2em 0
+    white-space no-wrap
+    
+    +from(768px)
+      margin 0 1em
+      padding .5em 0
+      font-size .7em
+      
+    &:after
+      width 0px
+      height 1px
+      background white
+      content ""
+      color blue
+      transition .2s
+      absolute(bottom left 50%)
+    &:before
+      width 0px
+      height 1px
+      background white
+      content ""
+      color blue
+      transition .2s
+      absolute(bottom right 50%)
+    &.is-selected
+    &:hover
+      &:after
+      &:before
+        width 50%

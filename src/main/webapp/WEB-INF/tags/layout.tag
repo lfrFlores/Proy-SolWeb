@@ -21,19 +21,58 @@
     <link href="<c:url value="/resources/styles/styles.css" />" rel="stylesheet"/>
    <script src="<c:url value="/resources/js/jquery-latest.min.js" />"></script>
    <title>CSS MenuMaker</title>
-    
+   
+   <!-- PLANTILLA -->
+   
+   
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link href="<c:url value="/resources/static/css/normalize.css" />" rel="stylesheet"/>
+   <link href="<c:url value="/resources/static/css/estilos.css" />" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link href="<c:url value="/resources/static/images/logo-black.jpeg" />" rel="stylesheet"/>
+	<link href="<c:url value="/resources/static/images/logo-black.jpeg" />" rel="stylesheet"/>
+    <meta name="theme-color" content="#0000FF"/>
+    <meta name="description" content="Sagitario">
+
+  <style>
+body {
+   background-color: black;
+}
+</style>
 </head>
 <body>
-	<div id='cssmenu'>
-		<ul>
-		   <li ><a href='/help'>Acerca de Nosotros</a></li>
-		   <li 	class='active'><a href='/sagitario/mantenimiento'>Mantenimientos</a></li>
-		   <li><a href='/sagitario/vehiculo'>Vehículos</a></li>
-		   <li ><a href='http://localhost:8080/sagitario'>Home</a></li>
-		</ul>
-	</div>
+	<nav class="MainMenu">
+        <ul class="MainMenu-list">
+          <li class="MainMenu-item">
+            <a class="MainMenu-link is-selected" href="http://localhost:8080/sagitario/">Casa</a>
+          </li>
+          <li class="MainMenu-item">
+            <a class="MainMenu-link" href="http://localhost:8080/sagitario/vehiculo">Vehículos</a>
+          </li>
+          <li class="MainMenu-logo">
+            <a href="http://localhost:8080/sagitario/">
+            
+       <img src="<c:url value="/resources/static/images/sol-quintero-logo-white.png" />"alt="Sol Quintero - Estratega digital logo"/>
+            
+            </a>
+          </li>
+          <li class="MainMenu-item">
+            <a class="MainMenu-link" href="http://localhost:8080/sagitario/mantenimiento">Mantenimientos</a>
+          </li>
+          <li class="MainMenu-item">
+            <a class="MainMenu-link contact-button" data-type="header" href="mailto:solquintero2113@gmail.com">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <section class="WorkSection" id="estratega-digital">
+      <div class="overlay">
+      <br><br>
 	
-	<div class="container">
 		<div id="pageheader">
 			<h2><jsp:invoke fragment="header"/></h2>		
 		</div>
@@ -42,11 +81,16 @@
 		  <jsp:doBody/>
 		</div>
 		
+		</div>
+       <img src="<c:url value="/resources/static/images/estratega-digital.jpg" />"alt="Estratega Digital"/>
+    
+    </section>
+		<!--
 		<div id="pagefooter" style="text-align:center">
 			<hr>
 		    <p id="copyright">Copyright 2017</p>
 		  <jsp:invoke fragment="footer"/>
-		</div>
-	</div>
+		</div>-->
+
 </body>
 </html>

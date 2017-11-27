@@ -56,7 +56,8 @@
 				<form:input path="km" cssClass="form-control"/>
 				<form:errors path="km"></form:errors>
 			</div>	
-			<div>
+			<br>
+			<div alingn="right">
 				<input type="submit" value="Guardar" class="btn btn-success"/>
 			</div>		
 		</form:form>

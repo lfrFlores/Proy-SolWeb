@@ -1,0 +1,27 @@
+@require "nib"
+@require "vars.styl"
+@require "WorkMenu.styl"
+@require "WorkSection.styl"
+@require "MainMenu.styl"
+@require "About.styl"
+
+body
+  background black
+  color white
+  text-rendering optimizeLegibility
+  -webkit-font-smoothing antialiased
+  font-family "Roboto"
+  &.is-about
+    background white url('../images/texture.png')
+    color $color-black
+    .MainMenu
+      background url('../images/texture.png')
+      &-link
+        color $color-black
+        &:after
+        &:before
+          background $color-black
+
+
+
+

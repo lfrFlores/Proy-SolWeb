@@ -14,6 +14,16 @@ public class ServiceVehiculo implements IService<Vehiculo> {
 	public ServiceVehiculo(DriverManagerDataSource dataSource) {
 		db = new JdbcTemplate(dataSource);
 	}
+	
+	@Override
+		public List<Map<String, Object>> getList(String searchCriteria) {
+			if (searchCriteria==null || searchCriteria.isEmpty()){
+				return db.queryForList("select * from vehiculo");
+			}else {
+				return db.queryForList("select * from vehiculo where placa like ?", '%' + searchCriteria + '%');
+			}
+		}
+		
 
 	@Override
 	public List<Map<String, Object>> getList() {

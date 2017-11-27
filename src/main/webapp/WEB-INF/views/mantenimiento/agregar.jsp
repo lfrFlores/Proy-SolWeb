@@ -5,21 +5,34 @@
 
 <t:layout>
     <jsp:body>
-		<form:form method="post" commandName="mantenimiento">			
-			<div>
-				<form:label path="descripcion">Descripcion</form:label>
-				<form:input path="descripcion" cssClass="form-control"/>
-				<form:errors path="descripcion"></form:errors>
-			</div>			
-			<div>
-				<form:label path="kmFrecuencia">Km Frecuncia</form:label>
-				<form:input path="kmFrecuencia" cssClass="form-control"/>
-				<form:errors path="kmFrecuencia"></form:errors>
-			</div>		
-			
-			<div>			
-				<input type="submit" value="Guardar" class="btn btn-success"/>
-			</div>		
-		</form:form>
+    <div class="container">	
+				<br><br>
+	    <div class="row">
+	    	<div class="col-lg-4">	 
+	      	
+	    	</div>
+	    	<div class="col-lg-4">
+	    	<form:form method="post" commandName="mantenimiento">			
+				<div>
+					<form:label path="descripcion">Descripcion</form:label>
+					<form:input path="descripcion" cssClass="form-control"/>
+					<form:errors path="descripcion"></form:errors>
+				</div>			
+				<div>
+					<form:label path="kmFrecuencia">Km Frecuncia</form:label>
+					<form:input path="kmFrecuencia" cssClass="form-control"/>
+					<form:errors path="kmFrecuencia"></form:errors>
+				</div>		
+				<br>
+				<div>			
+					<input type="submit" value="Guardar" class="btn btn-success" style="float: right;"/>
+				</div>		
+			</form:form>
+	    	</div>
+	    	<div class="col-lg-4">
+	    	
+	    	</div>
+	    	</div>
+	    </div>		
     </jsp:body>
 </t:layout>

@@ -30,9 +30,15 @@ public class VehiculoController {
 	@RequestMapping("")
 	public ModelAndView index(HttpServletRequest req) {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName(viewsUrl + "index");		
-		mav.addObject("vehiculos", serviceVehiculo.getList());		
-		return mav;		
+//		mav.setViewName(viewsUrl + "index");		
+//		mav.addObject("vehiculos", serviceVehiculo.getList());		
+//		return mav;		
+		mav.setViewName(viewsUrl + "index");
+		
+		String searchCriteria = req.getParameter("placa");
+		mav.addObject("vehiculos", serviceVehiculo.getList(searchCriteria));	
+		mav.addObject("searchCriteria", searchCriteria);
+		return mav;
 	}	
 	
 	@RequestMapping(value="/agregar", method=RequestMethod.GET)

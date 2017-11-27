@@ -1,0 +1,38 @@
+.WorkMenu
+  fixed(bottom left right)
+  z-index 2
+  margin 0 auto
+  list-style none
+  padding 0
+  li
+    display block
+    relative()
+    margin-bottom 30px
+    text-align center
+    &:after
+      content ""
+      height 20px
+      width 1px
+      background rgba(white, .5)
+      display block
+      absolute(top 105% left 50%)
+    &:last-child
+      &:after
+        display none
+  a
+    color rgba(white, .5)
+    text-decoration none
+    font-size .8em
+    font-weight bold
+    transition .3s
+    text-transform uppercase
+    &:hover
+      color white
+    &.is-active
+      font-family "Libre Baskerville"
+      color white
+      text-transform none
+      font-weight normal
+      font-size 2em
+      +from(768px)
+        font-size 4em
