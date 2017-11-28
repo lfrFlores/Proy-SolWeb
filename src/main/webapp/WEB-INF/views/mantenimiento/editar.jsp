@@ -5,24 +5,45 @@
 
 <t:layout>
     <jsp:body>    
-    <br><br>    
-    <div class="container">	
-		<form:form method="post" commandName="mantenimiento">
-			<div>
-				<form:label path="descripcion">descripcion</form:label>
-				<form:input path="descripcion" cssClass="form-control"/>
-				<form:errors path="descripcion"></form:errors>
-			</div>			
-			<div>
-				<form:label path="kmFrecuencia">Km Frecuencia</form:label>
-				<form:input path="kmFrecuencia" cssClass="form-control"/>
-				<form:errors path="kmFrecuencia"></form:errors>
-			</div>		
-			<br>
-			<div>
-				<input type="submit" value="Guardar" class="btn btn-success" style="float: right;"/>
-			</div>		
-		</form:form>
-		</div>	
+   <div class="container">	
+				<br><br>
+				<center><h1>Sistema de Control de Mantenimientos</h1></center>
+			
+	    <div class="row">
+	    	<div class="col-lg-4">	 
+	      	
+	    	</div>
+	    		<div class="col-lg-4">
+	    	<div  class="panel panel-default" style="filter:alpha(opacity=50); opacity:0.9;">
+	    	
+	    
+	    	<form:form method="post" commandName="mantenimiento">			
+				<div>
+					<form:label path="descripcion">Descripcion</form:label>
+					<form:input path="descripcion" cssClass="form-control"/>
+					<form:errors path="descripcion"></form:errors>
+				</div>			
+				<div>
+					<form:label path="kmFrecuencia">Km Frecuncia</form:label>
+					<form:input path="kmFrecuencia" cssClass="form-control"/>
+					<form:errors path="kmFrecuencia"></form:errors>
+				</div>		
+				<br>
+				<div>			
+					<input type="submit" value="Guardar" class="btn btn-success" style="float: right;"/>
+				</div>		
+			</form:form>
+	    	</div>
+	    	</div>
+	    	<div class="col-lg-4">
+	    	
+	    	</div>
+	    	</div>
+	    </div>	
+	    
+	    <style>
+	    label{
+	    color: black;
+	    }</style>	
     </jsp:body>
 </t:layout>

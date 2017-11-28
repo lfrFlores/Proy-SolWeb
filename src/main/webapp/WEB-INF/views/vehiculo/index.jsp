@@ -8,29 +8,26 @@
     
      <!-- Buscar -->
     <link href="<c:url value="/resources/styles/buscar.css" />" rel="stylesheet"/>
-  
-    
-    <!--  <div id='cssmenu'>
-		<ul>
-		   <li ><a href='/help'>Acerca de Nosotros</a></li>
-		   <li ><a href='/sagitario/mantenimiento'>Mantenimientos</a></li>
-		   <li class='active'><a href='/sagitario/vehiculo'>Vehículos</a></li>
-		   <li ><a href='http://localhost:8080/sagitario/'>Casa</a></li>
-		</ul>
-	</div>-->
-	  
        <div class= "container">
-       		<h1>Sistema de Control de Vehículos</h1>	
-				<div  class="panel panel-default">		
-				
-    				<div>
-			    		<a href="<c:url value="/vehiculo/agregar"/>"		 class="btn btn-primary">Agregar  <span class="glyphicon glyphicon-plus"></span></a>
-			    	</div> 	    
+       		<h1>Sistema de Control de Vehículos</h1>
+			<div  class="panel panel-default" style="filter:alpha(opacity=50); opacity:0.9;">			
+			<br>
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="row">
+						<div class="col-lg-6">
+							<div align="right">
+					    		<a  href="<c:url value="/vehiculo/agregar"/>" class="btn btn-success">Agregar  <span class="glyphicon glyphicon-plus"></span></a>
+					    	</div>
+						</div>
+					</div>
+				</div>					
+			</div>		    
 								<div id="wrap">		
 								<form method="GET" action="<c:url value="/vehiculo"/>">
 									<div>
 										<input type="text" name="placa"  placeholder="Ingresa la placa del vehículo" value="${searchCriteria}"/>
-										<input type="submit" value="Buscar" class="btn btn-success"/>
+										<input type="submit" value="Buscar" />
 									</div>								
 								</form>
 								</div>

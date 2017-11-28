@@ -6,6 +6,8 @@
 <t:layout>
     <jsp:body>
      <div class="container">	
+     	<center><h1>Sistema de Control de Vehículos</h1></center>
+			
 		<form:form method="post" commandName="vehiculo">	
 		<div class="row">
 			<div class="col-lg-4">

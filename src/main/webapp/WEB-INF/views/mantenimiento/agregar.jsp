@@ -7,11 +7,16 @@
     <jsp:body>
     <div class="container">	
 				<br><br>
+				<center><h1>Sistema de Control de Mantenimientos</h1></center>
+			
 	    <div class="row">
 	    	<div class="col-lg-4">	 
 	      	
 	    	</div>
-	    	<div class="col-lg-4">
+	    		<div class="col-lg-4">
+	    	<div  class="panel panel-default" style="filter:alpha(opacity=50); opacity:0.9;">
+	    	
+	    
 	    	<form:form method="post" commandName="mantenimiento">			
 				<div>
 					<form:label path="descripcion">Descripcion</form:label>
@@ -29,10 +34,16 @@
 				</div>		
 			</form:form>
 	    	</div>
+	    	</div>
 	    	<div class="col-lg-4">
 	    	
 	    	</div>
 	    	</div>
-	    </div>		
+	    </div>	
+	    
+	    <style>
+	    label{
+	    color: black;
+	    }</style>	
     </jsp:body>
 </t:layout>

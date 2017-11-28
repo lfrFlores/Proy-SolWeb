@@ -6,6 +6,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+ 
+
+
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Título</title>	
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -14,7 +17,6 @@
 
     
     
-    <meta charset='utf-8'>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    
@@ -33,16 +35,29 @@
    <link href="<c:url value="/resources/static/css/estilos.css" />" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    <link href="<c:url value="/resources/static/images/logo-black.jpeg" />" rel="stylesheet"/>
 	<link href="<c:url value="/resources/static/images/logo-black.jpeg" />" rel="stylesheet"/>
-    <meta name="theme-color" content="#0000FF"/>
+   	<meta name="theme-color" content="#0000FF"/>
     <meta name="description" content="Sagitario">
 
   <style>
 body {
    background-color: black;
 }
+.modal-footer {
+      background-color: #f9f9f9;
+  }
+  
+  .modal-header, h4, .close {
+      background-color: #FE0000;
+      color:white !important;
+      text-align: center;
+  }
+
 </style>
+
+
+
+
 </head>
 <body>
 	<nav class="MainMenu">
@@ -64,7 +79,7 @@ body {
             <a class="MainMenu-link" href="http://localhost:8080/sagitario/mantenimiento">Mantenimientos</a>
           </li>
           <li class="MainMenu-item">
-            <a class="MainMenu-link contact-button" data-type="header" href="mailto:solquintero2113@gmail.com">Contacto</a>
+            <a class="MainMenu-link contact-button" data-type="header" href="mailto:administracion@transportessagitario.com">Contacto</a>
           </li>
         </ul>
       </nav>
@@ -78,6 +93,16 @@ body {
 		</div>
 		
 		<div id="body">
+					<div class="container">
+			
+			<!--   <button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
+			
+			<button type="button" class="btn btn-danger danger" data-dismiss="modal">Action</button>
+			   -->
+			  
+			
+			  
+			</div>
 		  <jsp:doBody/>
 		</div>
 		
