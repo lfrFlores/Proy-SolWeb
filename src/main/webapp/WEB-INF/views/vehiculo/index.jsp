@@ -26,8 +26,8 @@
 								<div id="wrap">		
 								<form method="GET" action="<c:url value="/vehiculo"/>">
 									<div>
-										<input type="text" name="placa"  placeholder="Ingresa la placa del vehículo" value="${searchCriteria}"/>
-										<input type="submit" value="Buscar" />
+											<input type="text" name="placa" id="InputBuscar"  placeholder="Ingresa la placa del vehículo" value="${searchCriteria}"/>
+										<input type="submit"  name="BtnBuscar" value="Buscar" />
 									</div>								
 								</form>
 								</div>
@@ -44,13 +44,13 @@
 								 <thead class="thead-dark">
 									<tr>
 										<th>Placa</th>
-										<th>clase</th>
-										<th>marca</th>
-										<th>modelo</th>
-										<th>anioFabricacion</th>
-										<th>color</th>
-										<th>carroceria</th>
-										<th>serieChasis</th>
+										<th>Clase</th>
+										<th>Marca</th>
+										<th>Modelo</th>
+										<th>Año de Fabricación</th>
+										<th>Color</th>
+										<th>Carroceria</th>
+										<th>Serie Chasis</th>
 										<th>Tipo Combustible</th>
 										<th>km</th>
 										<th>Acciones</th>

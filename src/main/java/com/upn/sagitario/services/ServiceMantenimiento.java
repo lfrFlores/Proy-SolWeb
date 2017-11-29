@@ -33,6 +33,7 @@ private JdbcTemplate db;
 	public Mantenimiento getById(int id) {
 		Map<String, Object> object = db.queryForMap("select * from mantenimiento where id=?", id);
 		return new Mantenimiento( id,
+							  (String) object.get("tipo"),
 							  (String) object.get("descripcion"),
 							  (String) object.get("kmFrecuencia"));
 	}
@@ -41,14 +42,14 @@ private JdbcTemplate db;
 
 	@Override
 	public void add(Mantenimiento object) {
-		db.update("insert into mantenimiento(descripcion,kmFrecuencia)"
-				+ " values (?,?)",
-				object.getDescripcion(), object.getKmFrecuencia());		
+		db.update("insert into mantenimiento(tipo,descripcion,kmFrecuencia)"
+				+ " values (?,?,?)",
+				object.getTipo(),object.getDescripcion(), object.getKmFrecuencia());		
 	}
 
 	@Override
 	public void update(Mantenimiento object) {
-		db.update("update mantenimiento set descripcion=?,kmFrecuencia=? where id=?",object.getDescripcion(),object.getKmFrecuencia(), object.getId());	
+		db.update("update mantenimiento set tipo=?,descripcion=?,kmFrecuencia=? where id=?",object.getTipo(), object.getDescripcion(),object.getKmFrecuencia(), object.getId());	
 	}
 
 	@Override

@@ -6,9 +6,11 @@
 <t:layout>	
     <jsp:body>  
     <!-- Buscar -->
-    <link href="<c:url value="/resources/styles/buscar.css" />" rel="stylesheet"/>
+      <link href="<c:url value="/resources/styles/buscar.css" />" rel="stylesheet"/>
        <div class= "container">
-   		 <h1>Sistema de Control de Mantenimientos</h1>
+   		 <h1>Sistema de Control de Mantenimientos</h1>  		 
+   		
+   		
 			<div  class="panel panel-default" style="filter:alpha(opacity=50); opacity:0.9;">			
 			<br>
 			<div class="row">
@@ -25,17 +27,18 @@
 			<div id="wrap">		
 				<form method="GET" action="<c:url value="/mantenimiento"/>">
 					<div>
-						<input type="text" name="descripcion"  placeholder="Tipo de Mantenimiento" value="${searchCriteria}"/>
-						<input type="submit" value="Buscar"/>
+						<input type="text" name="descripcion" id="InputBuscar"  placeholder="Tipo de Mantenimiento" value="${searchCriteria}"/>
+						<input type="submit" name="BtnBuscar" value="Buscar"/>
 					</div>								
 				</form>
 			</div>		
     	
-    		<div>
+    		<div >
 				<table class="table table-bordered" id="tabla">
 					<thead>
 						<tr>
 							<th>Tipo</th>
+							<th>Descripcion</th>
 							<th>Km Frecuencia</th>
 							<th>Acciones</th>
 						</tr>
@@ -43,6 +46,8 @@
 					<tbody>
 						<c:forEach var = "mantenimiento" items="${mantenimientos}">
 							<tr>
+							
+								<td><c:out value = "${mantenimiento.tipo}"/></td>
 								<td><c:out value = "${mantenimiento.descripcion}"/></td>
 								<td><c:out value = "${mantenimiento.kmFrecuencia}"/></td>
 								
@@ -63,6 +68,8 @@
 			    						<%--   <a href="<c:url value="/mantenimiento/eliminar?id=${mantenimiento.id}"/>"><span class="glyphicon glyphicon-trash"></span></a>
 		    						  --%>	    						  
 		    						 	<c:set var = "id" value ="${mantenimiento.id}"/>
+		    						 	
+		    						  	<c:set var = "tipo"  value ="${mantenimiento.tipo}"/>
 		    						  	<c:set var = "km"  value ="${mantenimiento.kmFrecuencia}"/>
 				    				  	<c:set var = "des" value ="${mantenimiento.descripcion}"/>					   
 									   	<button type="button" class="btn btn-danger"  data-toggle="modal"  data-backdrop="false" data-target="#${mantenimiento.id}">
@@ -81,11 +88,15 @@
 								        <!-- Modal body -->
 								        <div class="modal-body">
 								        	<div class="row">
-								        		<div class="col-lg-6">
+								        	<div class="col-lg-4">
+								        			<label>Tipo: </label>        		   
+										        		<c:out value = "${tipo}"/>        		
+										        	</div>
+								        		<div class="col-lg-4">
 								        			<label>Descripción: </label>        		   
 										        		<c:out value = "${des}"/>        		
 										        	</div>
-										        	<div class="col-lg-6">
+										        	<div class="col-lg-4">
 										        	<label>Kilómetro: </label>       	
 										        		<c:out value = "${km}"/>
 										        	</div>
@@ -136,6 +147,7 @@
 				</tbody>
 			</table>
     	</div>
+    	
     </div>
    </div>
 <style>

@@ -7,7 +7,7 @@
     <jsp:body>
     <div class="container">	
 				<br><br>
-				<center><h1>Sistema de Control de Mantenimientos</h1></center>
+				<h1>Sistema de Control de Mantenimientos</h1>
 			
 	    <div class="row">
 	    	<div class="col-lg-4">	 
@@ -17,7 +17,12 @@
 	    	<div  class="panel panel-default" style="filter:alpha(opacity=50); opacity:0.9;">
 	    	
 	    
-	    	<form:form method="post" commandName="mantenimiento">			
+	    	<form:form method="post" commandName="mantenimiento">
+	    	<div>
+					<form:label path="tipo">Tipo</form:label>
+					<form:input path="tipo" cssClass="form-control"/>
+					<form:errors path="tipo"></form:errors>
+				</div>				
 				<div>
 					<form:label path="descripcion">Descripcion</form:label>
 					<form:input path="descripcion" cssClass="form-control"/>
