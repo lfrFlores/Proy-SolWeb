@@ -36,7 +36,7 @@ public class MantenimientoController {
 //		return mav;	
 		mav.setViewName(viewsUrl + "index");
 				
-		String searchCriteria = req.getParameter("descripcion");
+		String searchCriteria = req.getParameter("tipo");
 		mav.addObject("mantenimientos", serviceMantenimiento.getList(searchCriteria));	
 		mav.addObject("searchCriteria", searchCriteria);
 		return mav;

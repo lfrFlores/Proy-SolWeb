@@ -19,7 +19,7 @@ private JdbcTemplate db;
 			if (searchCriteria==null || searchCriteria.isEmpty()){
 				return db.queryForList("select * from mantenimiento");
 			}else {
-				return db.queryForList("select * from mantenimiento where descripcion like ?", '%' + searchCriteria + '%');
+				return db.queryForList("select * from mantenimiento where tipo like ?", '%' + searchCriteria + '%');
 			}
 		}
 		

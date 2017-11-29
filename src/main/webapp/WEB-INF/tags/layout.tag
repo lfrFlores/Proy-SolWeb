@@ -57,6 +57,30 @@ body {
       color:white !important;
       text-align: center;
   }
+  span{
+  color: red;}
+  .filter-option, span.text {
+  color: black
+  }
+  span.year {
+  color: white
+  }
+ span.glyphicon{
+  color: blue;} 
+  
+   /* estilo para lo q este dentro de la ventana modal */
+    .modal {
+        display: none;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        padding: 16px;
+        color: #333;
+        z-index:1002;
+        overflow: auto;        
+    }
 
 </style>
 

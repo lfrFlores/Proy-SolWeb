@@ -7,7 +7,7 @@
     <jsp:body>
      <div class="container">
      <br>
-     <h1>Sistema de Control de Vehículos</h1>		
+     <h1>Control de Vehículos</h1>		
      <div  class="panel panel-default" style="filter:alpha(opacity=50); opacity:0.9;">			
 				<br>
 		<form:form method="post" commandName="vehiculo">	

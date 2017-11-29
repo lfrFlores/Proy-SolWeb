@@ -8,7 +8,7 @@
     <!-- Buscar -->
       <link href="<c:url value="/resources/styles/buscar.css" />" rel="stylesheet"/>
        <div class= "container">
-   		 <h1>Sistema de Control de Mantenimientos</h1>  		 
+   		 <h1>Control de Mantenimientos</h1>  		 
    		
    		
 			<div  class="panel panel-default" style="filter:alpha(opacity=50); opacity:0.9;">			
@@ -27,7 +27,7 @@
 			<div id="wrap">		
 				<form method="GET" action="<c:url value="/mantenimiento"/>">
 					<div>
-						<input type="text" name="descripcion" id="InputBuscar"  placeholder="Tipo de Mantenimiento" value="${searchCriteria}"/>
+						<input type="text" name="tipo" id="InputBuscar"  placeholder="Tipo de Mantenimiento" value="${searchCriteria}"/>
 						<input type="submit" name="BtnBuscar" value="Buscar"/>
 					</div>								
 				</form>
@@ -109,37 +109,7 @@
 									    </div>								        
 								      </div>
 								    </div>
-								  </div>  	
-								  
-								 <!--  Editar -->
-								   <div class="modal fade" id="E${mantenimiento.id}">
-								    <div class="modal-dialog">
-								      <div class="modal-content">								      
-								        <!-- Modal Header -->
-								        <div class="modal-header">
-								          <h4 class="modal-title">Editar Mantenimiento</h4>
-								         	 <button type="button" class="close" data-dismiss="modal">&times;</button>
-								        </div>        
-								        <!-- Modal body -->
-								        <div class="modal-body">
-								        <form>
-  											<div class="form-group">
-								        	<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">							        		
-										 <label for="exampleFormControlInput1">Email address</label>
-   										 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  
-										</div>
-										</form>
-										</div>	       
-								  		 <!-- Modal footer -->
-								        <div class="modal-footer">
-								      	  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>        
-								        	 <a href="<c:url value="/mantenimiento/editar?id=${id}"/>"class="btn btn-danger">Eliminar <span class="glyphicon glyphicon-trash"></span></a>
-									    </div>								        
-								      </div>
-								    </div>
-								  </div>
-								  
+								  </div>  				  
 								  						
 								</td>
 							</tr>
@@ -158,19 +128,7 @@
 	  	background-color: sky-blue;
 	} 
     
-    /* estilo para lo q este dentro de la ventana modal */
-    .modal {
-        display: none;
-        position: absolute;
-        top: 25%;
-        left: 25%;
-        width: 50%;
-        height: 50%;
-        padding: 16px;
-        color: #333;
-        z-index:1002;
-        overflow: auto;        
-    }
+   
 </style>
     </jsp:body>
 </t:layout>
