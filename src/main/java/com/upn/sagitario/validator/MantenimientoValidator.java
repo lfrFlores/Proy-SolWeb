@@ -16,10 +16,9 @@ public class MantenimientoValidator implements Validator {
 	@Override
 	public void validate(Object o, Errors errors) {
 		Mantenimiento mantenimiento = (Mantenimiento) o;
-		ValidationUtils.rejectIfEmpty(errors, "descripcion", "required.descripcion","Descripción es obligatorio");
-		//ValidationUtils.rejectIfEmpty(errors, "aPaterno", "required.aPaterno","El ap. paterno es obligatorio");
-		//ValidationUtils.rejectIfEmpty(errors, "aMaterno", "required.aMaterno","El ap. materno es obligatorio");
-		//ValidationUtils.rejectIfEmpty(errors, "dni", "required.dni","El dni es obligatorio");
+		ValidationUtils.rejectIfEmpty(errors, "tipo", "required.tipo","Tipo es obligatorio");		
+		ValidationUtils.rejectIfEmpty(errors, "kmFrecuencia", "required.descripcion","Km Frecuencia es obligatorio");
+		
 	}
 
 }

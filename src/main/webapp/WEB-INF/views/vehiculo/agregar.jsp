@@ -113,7 +113,7 @@
 			</div>
 			<div class="col-lg-3">
 			<div>
-				<label>Km:</label>
+				<label>Km Recorrido:</label>
 				<form:input path="km" cssClass="form-control"/>
 				<form:errors path="km"></form:errors>
 			</div>

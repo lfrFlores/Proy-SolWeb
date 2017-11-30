@@ -52,7 +52,7 @@
 										<th>Carroceria</th>
 										<th>Serie Chasis</th>
 										<th>Tipo Combustible</th>
-										<th>km</th>
+										<th>km Recorrido</th>
 										<th>Acciones</th>
 									</tr>
 								</thead>

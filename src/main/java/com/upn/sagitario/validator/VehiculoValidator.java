@@ -18,9 +18,25 @@ public class VehiculoValidator implements Validator {
 	public void validate(Object o, Errors errors) {
 		Vehiculo vehiculo = (Vehiculo) o;
 		ValidationUtils.rejectIfEmpty(errors, "placa", "required.placa","La Placa es obligatorio");
-		//ValidationUtils.rejectIfEmpty(errors, "aPaterno", "required.aPaterno","El ap. paterno es obligatorio");
-		//ValidationUtils.rejectIfEmpty(errors, "aMaterno", "required.aMaterno","El ap. materno es obligatorio");
-		//ValidationUtils.rejectIfEmpty(errors, "dni", "required.dni","El dni es obligatorio");
+
+		ValidationUtils.rejectIfEmpty(errors, "clase", "required.clase","La Clase es obligatorio");
+
+		ValidationUtils.rejectIfEmpty(errors, "marca", "required.marca","La Marca es obligatorio");
+
+		ValidationUtils.rejectIfEmpty(errors, "modelo", "required.modelo","La Modelo es obligatorio");
+
+		ValidationUtils.rejectIfEmpty(errors, "anioFabricacion", "required.anioFabricacion","El año de Fabricación es obligatorio");
+
+		ValidationUtils.rejectIfEmpty(errors, "color", "required.color","El Color es obligatorio");
+
+		ValidationUtils.rejectIfEmpty(errors, "carroceria", "required.carroceria","La Carrocería es obligatorio");
+
+		ValidationUtils.rejectIfEmpty(errors, "serieChasis", "required.serieChasis","La Serie del Chasis es obligatorio");
+
+		ValidationUtils.rejectIfEmpty(errors, "tipoCombustible", "required.tipoCombustible","El tipo de Combustible es obligatorio");
+
+		ValidationUtils.rejectIfEmpty(errors, "km", "required.km","Km de recorrido es obligatorio");
+		
 	}
 
 }
